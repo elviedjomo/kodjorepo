@@ -1,0 +1,29 @@
+<profiles>
+  <profile>
+    <id>visualpath-kodjoartifactrepo</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>visualpath-kodjoartifactrepo</id>
+        <url>https://visualpath-503561459342.d.codeartifact.us-east-1.amazonaws.com/maven/kodjoartifactrepo/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<servers>
+  <server>
+    <id>visualpath-kodjoartifactrepo</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<mirrors>
+  <mirror>
+    <id>visualpath-kodjoartifactrepo</id>
+    <name>visualpath-kodjoartifactrepo</name>
+    <url>https://visualpath-503561459342.d.codeartifact.us-east-1.amazonaws.com/maven/kodjoartifactrepo/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
